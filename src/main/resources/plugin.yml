@@ -1,0 +1,8 @@
+name: WalkGroundRemovePlugin
+version: ${project.version}
+main: dev.freddi.walkgroundremoveplugin.WalkGroundRemovePlugin
+api-version: 1.16
+
+commands:
+  wg:
+    description: 歩いたら足元のBlockが消えるプラグイン
