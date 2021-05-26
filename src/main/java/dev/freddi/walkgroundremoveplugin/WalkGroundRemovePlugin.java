@@ -22,12 +22,12 @@ public final class WalkGroundRemovePlugin extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if(cmd.getName().equalsIgnoreCase(Commands.root)) { // 起動
-            if (args.length != 1) {
+        if(cmd.getName().equalsIgnoreCase(Commands.root)) {
+            if (args.length != 1) { // 簡単なフォーマットチェック
                 sender.sendMessage(ChatColor.RED + Const.LogHeader + Texts.Log.invalid_format);
                 return false;
             }
-            if (args[0].equalsIgnoreCase(Commands.Subs.start)) {
+            if (args[0].equalsIgnoreCase(Commands.Subs.start)) { // 起動
                 if (!Flags.COMMAND_ENABLED) {
                     Flags.COMMAND_ENABLED = true;
                     sender.sendMessage(ChatColor.GREEN + Const.LogHeader + Texts.Log.start);
